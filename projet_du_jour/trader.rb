@@ -18,34 +18,31 @@ def nom_monnay
 
 	nom = page.css("td[2]/a").text
 
-	#puts nom
+#	puts nom
 end
 
+noms = nom_monnay.split(
 
+prices = hacking_of_cryptomarket
 
+puts prices
+puts noms[0]
 
-def rangement(nom,price)
+n = 0
+i = 0
 
-hash = hash.new
+puts "Données récupérées avec succès"
+puts "Afficher le cours des cryptomonaies (ça fait beaucoup de texte) ? (y/n)"
+rep=gets.chomp
+  if rep == "y"
 
-hash[nom => price]
-
-nom_monnay
-
-end
-
-
-price = hacking_of_cryptomarket
-
-# nom = nom_monnay
-
-hash = Hash.new
-
-
-price.each.with_index do |prix,i| 
-        
-	hash[price["prix"]]=nom[i]
-        end
-        
-
-puts hash
+    ##### Grâce à cette boucle, on joint ensemble le nom et la currency
+    while  n < prices.length
+                puts noms[i] + prices[i]
+                puts "---------------"
+                n +=1
+                i +=1
+    end
+  else
+    puts "Bien reçu chef !"
+end 
